@@ -127,10 +127,7 @@ app.use('/api/users', userRoutes);
 // DATABASE CONNECTION
 const connectDB = async () => {
     try {
-        await mongoose.connect(DB, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
+        await mongoose.connect(DB);
         console.log("MongoDB Connected Successfully");
     } catch (error) {
         console.error("Error connecting to the database:", error);
